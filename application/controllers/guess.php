@@ -13,7 +13,7 @@ class Guess extends Application
 
     function index()
     {
-        // get the last quote from the array
+        // get the fourth quote from the array
         $quote = $this->quotes->get(4);
         $this->data = array_merge($this->data, $quote);
         $this->render();
