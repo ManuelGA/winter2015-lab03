@@ -8,11 +8,13 @@ class First extends Application
     function __construct()
     {
         parent::__construct();
+        // view to get the info from.
         $this->data['pagebody'] = 'justone';
     }
 
     function index()
     {
+        // get the first quote from the array
         $quote = $this->quotes->first();
         $this->data = array_merge($this->data, $quote);
         $this->render();
