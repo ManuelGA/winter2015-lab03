@@ -32,6 +32,16 @@ class Welcome extends Application {
         
     }
 
+    function shucks()
+    {
+        //view to get the info
+        $this->data['pagebody'] = 'justone';
+    
+        // get the first quote from the array
+        $quote = $this->quotes->get(2);
+        $this->data = array_merge($this->data, $quote);
+        $this->render();
+    }
 }
 
 /* End of file Welcome.php */
