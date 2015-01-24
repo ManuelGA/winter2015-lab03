@@ -20,6 +20,13 @@ class Bingo extends Application
        
     }
 
+    function wisdom()
+    {
+        // get the last quote from the array
+        $quote = $this->quotes->get(6);
+        $this->data = array_merge($this->data, $quote);
+        $this->render();       
+    }
 
 }
 /* 
