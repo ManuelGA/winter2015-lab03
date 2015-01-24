@@ -11,7 +11,7 @@ class First extends Application
     function index()
     {
         $quote = $this->quotes->first();
-        $this->load_justone($quote);
+        $this->justone($quote);
     }
 
 
