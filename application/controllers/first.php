@@ -3,6 +3,8 @@
 
 class First extends Application
 {
+   
+    
     function __construct()
     {
         parent::__construct();
@@ -11,7 +13,7 @@ class First extends Application
     function index()
     {
         $quote = $this->quotes->first();
-        $this->justone($quote);
+        echo $quote;
     }
 
 
