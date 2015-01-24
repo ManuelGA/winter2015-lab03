@@ -20,7 +20,23 @@ class First extends Application
         $this->render();
        
     }
-
+    
+    function zzz()
+    {
+        //get the first one by ID
+        $quote = $this->quotes->get(1);
+        $this->data = array_merge($this->data, $quote);
+        $this->render();      
+    }
+    
+    function gimme()
+    {
+        //get the third one by ID
+        $quote = $this->quotes->get(3);
+        $this->data = array_merge($this->data, $quote);
+        $this->render();
+        
+    }
 
 }
 /* 
