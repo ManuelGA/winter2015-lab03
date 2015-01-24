@@ -8,12 +8,15 @@ class First extends Application
     function __construct()
     {
         parent::__construct();
+        $this->data['pagebody'] = 'justone';
     }
 
     function index()
     {
         $quote = $this->quotes->first();
-        echo $quote;
+        $this->data = array_merge($this->data, $quote);
+        $this->render();
+       
     }
 
 
