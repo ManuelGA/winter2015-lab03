@@ -29,6 +29,7 @@ class Welcome extends Application {
         $this->data['authors'] = $authors;
 
         $this->render();
+        
     }
 
 }
