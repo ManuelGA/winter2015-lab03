@@ -2,7 +2,7 @@
 
 
 
-class ovverrideDisplay
+class overrideDisplay
 {
 
 
@@ -12,8 +12,13 @@ class ovverrideDisplay
     function display_override()
     {
         $this->CI = & get_instance();
+        // get the current output
         $output = $this->CI->output->get_output();
+       
+        // the regular expression that matchess <p class="lead"> </p>
+        $regularExp = "/(<p\s+class\=\"lead\">.*<\/p>)/";
         
+     
         
         
     }
