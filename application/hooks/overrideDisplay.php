@@ -21,12 +21,12 @@ class overrideDisplay
         // look for regular expression
         if (preg_match($regularExp, $output, $newoutput))
         {
-            // regex that looks for all the capital letters and the rest of the word
-            // and will bold the whole word
+            // regex that looks for all the capital letters inside the paragraph of 
+            // lead class and will bold them. ** It will bold the whole word not just the letter **
             $newoutput[0] = preg_replace("/([A-Z]+[^-\s]*)/", "<strong>$1</strong>", $newoutput[0]); 
             
             // will replace the normal output with the newooutput for all the paragraphs
-            // of 'lead' class (those matching the regularExp)
+            // of 'lead' class (those matching the regularExp) with capital letters
             $output = preg_replace($regularExp, $newoutput[0], $output);
         }
         
