@@ -18,7 +18,20 @@ class overrideDisplay
         // the regular expression that matchess <p class="lead"> </p>
         $regularExp = "/(<p\s+class\=\"lead\">.*<\/p>)/";
         
-     
+        // look for regular expression
+        if (preg_match($regularExp, $output, $newoutput))
+        {
+            // regex that looks for all the capital letters and the rest of the word
+            // and will bold the whole word
+            $newoutput[0] = preg_replace("/([A-Z]+[^-\s]*)/", "<strong>$1</strong>", $newoutput[0]); 
+            
+            // will replace the normal output with the newooutput for all the paragraphs
+            // of 'lead' class (those matching the regularExp)
+            $output = preg_replace($regularExp, $newoutput[0], $output);
+        }
+        
+        
+        echo $output;
         
         
     }
